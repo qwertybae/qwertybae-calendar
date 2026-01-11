@@ -127,8 +127,8 @@ select {
   font-style: normal;
   line-height: 1.25rem;
   letter-spacing: 0.1rem;
-  width: auto; /* ← Bỏ width cố định */
-  margin-top: -1rem; /* ← THÊM DÒNG NÀY để kéo lên gần số */
+  width: auto; 
+  margin-top: -1rem; 
   
 
 }

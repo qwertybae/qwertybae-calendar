@@ -1,3 +1,18 @@
+.silkscreen-regular {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.silkscreen-bold {
+  font-family: "Silkscreen", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+
 * {
   box-sizing: border-box;
 }
@@ -7,14 +22,30 @@ body {
   margin: 0;
   width: 100vw;
   height: 100vh;
-
-  background: white;
   user-select: none;
   -webkit-app-region: drag;
+  background-image: url("assets/outer-frame-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  /* background-image: url("assets/inner-frame.png"); */
 }
 
 .app {
-  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 13.375rem;
+  padding: 1rem 1.0625rem;
+
+  background-image: url("assets/outer-frame-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
 }
 
 button,
@@ -23,4 +54,91 @@ textarea,
 select {
   -webkit-app-region: no-drag;
   cursor: pointer;
+}
+
+.title {
+
+  display: flex;
+  padding: 0.25rem 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+
+  border-radius: 16px;
+  border: 1px solid #3D8B63;
+  background: #B8E6CC;
+  
+
+
+  color: var(--white, #2D5F4A);
+
+  /* title */
+  font-family: 'SilkScreen';
+  font-size: 0.75rem;
+  white-space: nowrap;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 100%; 
+  padding: 0.25rem 0.5rem; 
+}
+
+#calendar {
+  display: flex;
+  width: 11.25rem;
+  height: 10.0625rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 1.5rem;
+
+
+  background-image: url("assets/inner-frame.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#day {
+  color: white;
+  text-align: center;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #2D5F4A;
+  font-family: 'Pixelify Sans';
+  font-size: 7.5rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 7rem;
+  letter-spacing: 0.45rem;
+  margin-bottom: 0;
+
+  animation: fadeIn 0.3s ease;
+}
+
+#month {
+  color: white;
+  text-align: center;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #2D5F4A;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.25rem;
+  letter-spacing: 0.1rem;
+  width: auto; /* ← Bỏ width cố định */
+  margin-top: -1rem; /* ← THÊM DÒNG NÀY để kéo lên gần số */
+  
+
+}
+
+#calendar:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
 }
